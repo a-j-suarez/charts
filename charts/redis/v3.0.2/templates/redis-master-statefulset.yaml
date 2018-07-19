@@ -36,7 +36,7 @@ spec:
       {{- end}}
       {{- if .Values.master.securityContext.enabled }}
       securityContext:
-        fsGroup: {{ .Values.master.securityContext.fsGroup }}
+        runAsGroup: {{ .Values.master.securityContext.fsGroup }}
         runAsUser: {{ .Values.master.securityContext.runAsUser }}
       {{- end }}
       {{- if .Values.master.nodeSelector }}
